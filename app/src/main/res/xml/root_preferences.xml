@@ -1,0 +1,41 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.spikingacacia.spikyletadelivery.PreferencePic/>
+    <PreferenceCategory app:title="General">
+        <EditTextPreference
+            app:useSimpleSummaryProvider="true"
+            app:enabled="false"
+            app:defaultValue="Leta"
+            app:key="email"
+            app:maxLines="1"
+            app:singleLine="true"
+            app:title="Email Address" />
+        <EditTextPreference
+            app:useSimpleSummaryProvider="true"
+            app:defaultValue="Order"
+            app:key="username"
+            app:maxLines="1"
+            app:singleLine="true"
+            app:title="Full Names" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Legal">
+        <Preference
+            app:fragment="com.spikingacacia.spikyletadelivery.SettingsActivity$TermsAndConditionsPreferenceFragment"
+            app:title="Terms and Conditions" />
+        <Preference
+            app:fragment="com.spikingacacia.spikyletadelivery.SettingsActivity$PrivacyPolicyPreferenceFragment"
+            app:title="Privacy Policy" />
+
+    </PreferenceCategory>
+    <Preference
+        android:fragment="com.spikingacacia.spikyletadelivery.SettingsActivity$AboutPreferenceFragment"
+        android:icon="@drawable/ic_help"
+        android:title="@string/about"
+        app:allowDividerAbove="true"/>
+
+
+</PreferenceScreen>
